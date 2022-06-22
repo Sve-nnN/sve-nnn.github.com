@@ -1,3 +1,15 @@
 .black {
     color: black;
 }
+
+.header {
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+    background-color: cornflowerblue;
+}
+
+.subheader {
+    text-align: center;
+    background-color: rgba(100, 148, 237, 0.56);
+}
