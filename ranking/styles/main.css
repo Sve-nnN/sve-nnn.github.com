@@ -22,6 +22,11 @@ body {
     border-radius: 10px;
 }
 
+.city {
+    border-bottom: solid 2px #870058;
+    border-spacing: 2px;
+}
+
 h1 {
     text-align: center;
     font-family: 'Kdam Thmor Pro', sans-serif;
@@ -31,6 +36,11 @@ thead {
     margin-bottom: 20px;
     background-color: #2E0E02;
     color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #870058;
 }
 
 tr {
