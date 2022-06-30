@@ -16,19 +16,64 @@ body {
 }
 
 .content {
+    position: absolute;
     width: 1000px;
     height: 700px;
     background-color: antiquewhite;
     border-radius: 10px;
     padding: 10px;
-    font-size: ;
     overflow: auto;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.nombre {
+    font-size: 700;
+    border-bottom: 2px solid #870058;
+    padding-bottom: 20px;
 }
 
 .city {
     border-bottom: solid 2px #870058;
     border-spacing: 2px;
+}
+
+.number {
+    padding: 20px;
+    background-color: #870058;
+    color: #FFCAD4;
+    border-radius: 10px;
+}
+
+.image {
+    max-width: 40%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.description {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.nodecor {
+    text-decoration: none;
+    color: #FFCAD4;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #f12711;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
 }
 
 h1 {
