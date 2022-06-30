@@ -17,9 +17,13 @@ body {
 
 .content {
     width: 1000px;
-    height: 400px;
+    height: 700px;
     background-color: antiquewhite;
     border-radius: 10px;
+    padding: 10px;
+    font-size: ;
+    overflow: auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .city {
@@ -52,13 +56,69 @@ tr:nth-child(even) {
 }
 
 td {
-    margin-bottom: 100px;
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 15px;
+}
+
+td:first-child {
+    font-weight: 700;
+    color: #870058;
+}
+
+th {
+    display: none;
 }
 
 .tabla {
     width: 100%;
-    height: 80%;
+    height: 100%;
     text-align: center;
     padding: 10px;
     border-spacing: 0px;
+}
+
+.advertencia {
+    display: none;
+}
+
+@media only screen and (min-width: 688px) {
+    td {
+        display: table-cell;
+        width: auto;
+        padding: 0px;
+        margin: 15px;
+    }
+    td:first-child {
+        font-weight: 700;
+        color: #870058;
+    }
+    th {
+        display: table-cell;
+    }
+    .content {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 210px) {
+    .tabla {
+        display: none;
+    }
+    h1 {
+        display: none;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .advertencia {
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        border: 3px solid #f12711;
+        margin: 3px;
+    }
 }
