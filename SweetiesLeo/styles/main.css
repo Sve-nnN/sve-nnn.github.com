@@ -1,0 +1,119 @@
+:root {
+    --amarillo: #F1DB63;
+    --azul: #89ECDA;
+    --rosa: #ff9999;
+    --negro: #070707;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: bisque;
+}
+
+
+/*NAVBAR */
+
+.navbar {
+    background-color: #89ECDA;
+    margin: 0px;
+    padding: 0px;
+    height: 3rem;
+}
+
+.navigation {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-color: #070707;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.nav-item {
+    margin-right: 5px;
+}
+
+.logo {
+    float: left;
+}
+
+li:first-of-type {}
+
+
+/*SECCION AMARILLA*/
+
+header {
+    color: var(--negro);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.header {
+    height: 150vh;
+    background-color: var(--amarillo);
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.leo {
+    text-shadow: -3px -3px 0px var(--rosa);
+    border-bottom: 1px solid var(--rosa);
+    border-spacing: 0px;
+    padding-bottom: 0px;
+}
+
+
+/*SECCION AZUL*/
+
+.main {
+    height: 85vh;
+    background-color: var(--azul);
+}
+
+
+/*SECCION ROSA*/
+
+.second {
+    height: 85vh;
+    background-color: var(--rosa);
+}
+
+
+/* SECCION DEL FOOTER*/
+
+.footer {
+    height: 25vh;
+    background-color: var(--negro);
+    color: azure;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.copy {
+    padding: 5px;
+}
+
+
+/* SECCION CALCULADORA*/
+
+.calc-header {
+    height: 5vh;
+    background-color: var(--amarillo);
+    font-size: 3vh;
+    text-align: center;
+}
