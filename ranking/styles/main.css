@@ -34,6 +34,7 @@ body {
 
 .city {
     border-bottom: solid 2px #870058;
+    padding-bottom: 2px;
     border-spacing: 2px;
 }
 
@@ -118,7 +119,7 @@ th {
 
 .tabla {
     width: 100%;
-    height: 100%;
+    height: 75%;
     text-align: center;
     padding: 10px;
     border-spacing: 0px;
