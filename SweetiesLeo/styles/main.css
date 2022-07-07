@@ -5,7 +5,18 @@
     --negro: #070707;
 }
 
+@font-face {
+    font-family: AlboriRegular;
+    src: url('../fonts/albori/Albori-Light.woff'), url('../fonts/albori/Albori-Regular.woff'), url('../fonts/albori/Albori-Thin.woff');
+}
+
+@font-face {
+    font-family: CooperBlack;
+    src: url('../fonts/cooper/CooperBlack.woff'), url('../fonts/cooper/CooperBlackStd-Italic.woff');
+}
+
 body {
+    font-family: AlboriRegular;
     margin: 0;
     padding: 0;
 }
@@ -21,6 +32,10 @@ a {
 
 
 /*NAVBAR */
+
+.logo {
+    height: 100%;
+}
 
 .navbar {
     background-color: #89ECDA;
