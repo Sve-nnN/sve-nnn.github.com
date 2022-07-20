@@ -17,37 +17,135 @@
 
 body {
     font-family: AlboriRegular;
-    margin: 0;
-    padding: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--negro);
+    background-color: beige;
 }
 
 li {
-    list-style-type: none;
+    color: var(--negro);
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: CooperBlack;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
 
 /*NAVBAR */
 
-li {
-    color: var(--negro);
+.header {
+    margin: 0;
+    background-color: var(--azul);
+    padding: 0;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+}
+
+.same {
+    max-width: 250px;
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.media {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    gap: 20px;
+    align-items: center;
+    float: right;
+}
+
+li,
+.media-icon {
+    display: inline-block;
+}
+
+.fa-brands {
+    font-size: 1.318em;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    height: 50px;
+    width: auto;
+}
+
+
+/*CARRUSEL*/
+
+.carrusel {
+    height: 80vh;
+    width: 100vw;
+}
+
+.item-carrusel {
+    height: 100%;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.adon-carrusel {
+    position: absolute;
+    top: 80%;
+    left: 33;
+    width: auto;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-carrusel {
+    font-family: CooperBlack;
     font-size: 2em;
 }
 
-.content {
-    margin: 0 10vh;
-    background-color: white;
-    height: 100vh;
+.boton-carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: var(--negro);
+    color: beige;
 }
 
-.navbar {
-    background-color: var(--azul) !important;
+.img-carrusel {
+    height: 300px;
+    width: auto;
 }
 
-div.Header {
-    display: none;
-}
+
+/*CONTENIDO*/
