@@ -12,6 +12,12 @@ body {
 
 p {
     font-size: 15px;
+    color: var(--grayblue);
+}
+
+h3 {
+    font-size: 1.2em;
+    color: var(--darkblue);
 }
 
 .container {
@@ -22,8 +28,11 @@ p {
 }
 
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white);
-    height: 400px;
+    height: 420px;
     width: 300px;
     text-align: center;
 }
@@ -35,7 +44,7 @@ img,
 
 .content {
     width: 80%;
-    margin: 20px;
+    margin: 10px;
 }
 
 img {
