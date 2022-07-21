@@ -100,7 +100,7 @@ img {
 }
 
 .cart:hover {
-    background-color: hsla(158, 36%, 37%, 0.781);
+    background-color: hsl(158, 36%, 22%);
 }
 
 svg {
