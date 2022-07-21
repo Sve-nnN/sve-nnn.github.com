@@ -1,0 +1,126 @@
+:root {
+    --primary1: hsl(158, 36%, 37%);
+    --primary2: hsl(30, 38%, 92%);
+    --neutral1: hsl(212, 21%, 14%);
+    --neutral2: hsl(228, 12%, 48%);
+    --neutral3: hsl(0, 0%, 100%);
+    --ff1: 'Fraunces', serif;
+    --ff2: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+body {
+    background-color: var(--primary2);
+}
+
+h2,
+.price {
+    font-family: var(--ff1);
+    text-transform: capitalize;
+}
+
+h2 {
+    color: var(--neutral1);
+    font-size: 2rem;
+    line-height: 33px;
+    margin-top: 0px;
+}
+
+p {
+    font-size: 14px;
+    color: var(--neutral2);
+}
+
+img {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+p {
+    line-height: 20px;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff2);
+}
+
+.card {
+    display: flex;
+    background-color: var(--neutral3);
+    height: 450px;
+    width: 590px;
+    border-radius: 10px;
+}
+
+img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.img {
+    height: 100%;
+    width: auto;
+}
+
+.price {
+    display: flex;
+    color: var(--primary1);
+    font-size: 2rem;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.discount {
+    font-family: var(--ff2);
+    color: var(--neutral2);
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+
+.cart {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    color: var(--primary2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: var(--primary1);
+    transition: 0.5s;
+}
+
+.cart:hover {
+    background-color: hsla(158, 36%, 37%, 0.781);
+}
+
+svg {
+    margin-right: 10px;
+}
+
+.contenido {
+    margin: 0px 30px -20px 30px;
+}
+
+.perfume {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: var(--neutral2);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8em;
+}

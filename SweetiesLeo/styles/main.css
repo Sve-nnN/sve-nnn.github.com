@@ -3,11 +3,13 @@
     --azul: #89ECDA;
     --rosa: #ff9999;
     --negro: #070707;
+    --fuentesecundaria: 'Lobster', cursive;
+    --fuenteprincipal: 'Montserrat', sans-serif;
 }
 
 @font-face {
-    font-family: AlboriRegular;
-    src: url('../fonts/albori/Albori-Light.woff'), url('../fonts/albori/Albori-Regular.woff'), url('../fonts/albori/Albori-Thin.woff');
+    font-family: Maxwell;
+    src: url('../fonts/maxwell/maxwell.regular.woff'), url('../fonts/maxwell/maxwell.light.woff'), url('../fonts/maxwell/maxwell.bold.woff');
 }
 
 @font-face {
@@ -16,11 +18,13 @@
 }
 
 body {
-    font-family: AlboriRegular;
+    font-family: var(--fuenteprincipal);
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--negro);
-    background-color: beige;
+    background-color: azure;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -34,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: CooperBlack;
+    font-family: var(--fuenteprincipal);
     text-align: center;
 }
 
@@ -43,22 +47,46 @@ a {
 }
 
 
+/* ANUNCIO */
+
+.news {
+    background-color: var(--negro);
+    color: beige;
+    font-size: 1.2em;
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: maxwell;
+    letter-spacing: 2px;
+}
+
+
 /*NAVBAR */
 
 .header {
-    margin: 0;
     background-color: var(--azul);
-    padding: 0;
 }
 
 nav {
+    background-color: var(--azul);
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
 }
 
 .same {
     max-width: 250px;
+}
+
+.link {
+    font-family: maxwell;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--negro);
+    font-weight: bolder;
 }
 
 ul {
@@ -69,6 +97,7 @@ ul {
     float: left;
     margin: 0;
     padding: 0;
+    padding-left: 100px;
 }
 
 .media {
@@ -80,6 +109,7 @@ ul {
     gap: 20px;
     align-items: center;
     float: right;
+    padding-right: 100px;
 }
 
 li,
@@ -91,10 +121,12 @@ li,
     font-size: 1.318em;
 }
 
-.logo {
+.logo-space {
+    font-family: var(--fuentesecundaria);
+    font-size: 2.5em;
     position: absolute;
-    top: 0;
-    left: 45%;
+    top: 5%;
+    left: 42%;
     height: 50px;
     width: auto;
 }
@@ -103,22 +135,23 @@ li,
 /*CARRUSEL*/
 
 .carrusel {
-    height: 80vh;
-    width: 100vw;
+    height: 85vh;
+    width: 100%;
 }
 
 .item-carrusel {
     height: 100%;
     background-color: var(--azul);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: relative;
 }
 
 .adon-carrusel {
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 33;
     width: auto;
     height: 25%;
@@ -128,24 +161,63 @@ li,
 }
 
 .texto-carrusel {
-    font-family: CooperBlack;
-    font-size: 2em;
+    font-family: maxwell;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-size: 2.8em;
+    letter-spacing: -1px;
 }
 
 .boton-carrusel {
     display: flex;
+    font-family: maxwell;
+    font-size: 1.3em;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 50px;
     background-color: var(--negro);
     color: beige;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.boton-carrusel:hover {
+    background-color: #070707c4;
 }
 
 .img-carrusel {
     height: 300px;
+    margin-top: -60px;
     width: auto;
 }
 
 
 /*CONTENIDO*/
+
+section {
+    background-color: var(--rosa);
+    height: 60vh;
+}
+
+.cards {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.card {
+    width: 200px;
+    height: 80%;
+    display: inline-block;
+    background-color: #F1DB63;
+    border-radius: 10px;
+}
+
+.card-img {
+    max-width: 100%;
+    max-height: auto;
+}
