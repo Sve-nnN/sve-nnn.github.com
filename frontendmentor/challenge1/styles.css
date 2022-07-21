@@ -120,7 +120,7 @@ svg {
     font-size: 0.8em;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
     img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
