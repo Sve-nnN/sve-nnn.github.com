@@ -1,0 +1,44 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightgray: hsl(212, 45%, 89%);
+    --grayblue: hsl(220, 15%, 55%);
+    --darkblue: hsl(218, 44%, 22%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--lightgray);
+}
+
+p {
+    font-size: 15px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--white);
+    height: 400px;
+    width: 300px;
+    text-align: center;
+}
+
+img,
+.card {
+    border-radius: 10PX;
+}
+
+.content {
+    width: 80%;
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
