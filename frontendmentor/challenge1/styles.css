@@ -8,12 +8,6 @@
     --ff2: 'Montserrat', sans-serif;
 }
 
-@media screen and (min-width: 376px) {
-    body {
-        flex-direction: column;
-    }
-}
-
 body {
     background-color: var(--primary2);
 }
@@ -37,6 +31,7 @@ p {
 }
 
 img {
+    content: url("./images/image-product-desktop.jpg");
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -123,4 +118,32 @@ svg {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 0.8em;
+}
+
+@media screen and (max-width: 375px) {
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        content: url("./images/image-product-mobile.jpg");
+    }
+    .content {
+        padding: 0;
+        margin: 0;
+        width: 370px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .img {
+        width: 100%;
+        height: auto;
+    }
+    .card {
+        max-width: 340px;
+        height: 90%;
+        display: block;
+    }
+    .contenido {
+        display: block;
+    }
 }
