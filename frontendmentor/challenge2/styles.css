@@ -32,19 +32,31 @@ h3 {
     justify-content: center;
     align-items: center;
     background-color: var(--white);
-    height: 420px;
-    width: 300px;
+    height: 400px;
+    width: 280px;
     text-align: center;
+    margin: 0;
+    padding: 30px 15px;
 }
 
 img,
 .card {
-    border-radius: 10PX;
+    border-radius: 15PX;
 }
 
 .content {
-    width: 80%;
-    margin: 10px;
+    width: 100%;
+}
+
+h3,
+p {
+    padding: 5px 15px;
+    margin: 0px;
+}
+
+p {
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 img {
