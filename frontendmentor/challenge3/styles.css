@@ -43,6 +43,27 @@ p {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    position: relative;
+    background-color: var(--cyan);
+}
+
+.eye {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, 0.548);
+    border-radius: 15px;
+    position: absolute;
+    top: 13%;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.eye:hover {
+    opacity: 1;
 }
 
 .creator {
@@ -52,6 +73,12 @@ p {
     gap: 9px;
     font-size: 0.85em;
     margin: 10px 0px;
+}
+
+h2,
+.name {
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .name {
@@ -95,4 +122,9 @@ p {
     height: 2px;
     width: 100%;
     margin: 10px 0;
+}
+
+.name:hover,
+h2:hover {
+    color: var(--cyan);
 }
