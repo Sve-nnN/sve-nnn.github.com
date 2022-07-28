@@ -1,0 +1,138 @@
+:root {
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+    --ffbig: 'Big Shoulders Display', cursive;
+    --fflex: 'Lexend Deca', sans-serif;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--fflex);
+    color: var(--Transparentwhite);
+}
+
+h2 {
+    font-family: var(--ffbig);
+}
+
+body,
+button,
+h2 {
+    color: var(--Verylightgray);
+    font-family: var(--fflex);
+}
+
+p {
+    color: var(--Transparentwhite);
+}
+
+h2 {
+    font-family: var(--ffbig);
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: 'one' 'two' 'three';
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.block {
+    background-color: var(--brightorange);
+    color: var(--Transparentwhite);
+    max-width: 240px;
+    padding: 35px;
+    line-height: 25px;
+}
+
+.block:nth-of-type(1) {
+    grid-area: one;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.block:nth-of-type(2) {
+    background-color: var(--darkcyan);
+    grid-area: two;
+}
+
+.block:nth-of-type(3) {
+    background-color: var(--Verydarkcyan);
+    grid-area: three;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button {
+    font-size: 1.1em;
+    border: none;
+    display: block;
+    width: 150px;
+    height: 55px;
+    border-radius: 30px;
+    margin: 0;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+button:hover {
+    border: solid 3px var(--Transparentwhite);
+    cursor: pointer;
+    color: var(--Transparentwhite);
+}
+
+.button {
+    color: var(--Verydarkcyan);
+}
+
+.button:hover {
+    background-color: var(--Verydarkcyan);
+}
+
+.cyan {
+    color: var(--darkcyan);
+}
+
+.cyan:hover {
+    background-color: var(--darkcyan);
+}
+
+.darkcyan {
+    color: var(--brightorange);
+}
+
+.darkcyan:hover {
+    background-color: var(--brightorange);
+}
+
+main {
+    display: flex;
+}
+
+@media (min-width: 376px) {
+    .grid-layout {
+        grid-template-columns: auto;
+        grid-template-rows: auto minmax(0, 1fr);
+        grid-template-areas: 'one two three';
+    }
+    .block {
+        max-width: 230px;
+        padding: 40px;
+    }
+    .block:nth-of-type(1) {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+    .block:nth-of-type(3) {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+}
