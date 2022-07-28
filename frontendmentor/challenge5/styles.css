@@ -1,0 +1,131 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --brightyellow: hsl(71, 73%, 54%);
+    --lightgray: hsl(204, 43%, 93%);
+    --grayishblue: hsl(218, 22%, 67%);
+}
+
+body,
+button {
+    background-color: var(--lightgray);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: var(--grayishblue);
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+h2 {
+    color: var(--cyan);
+    padding: 0;
+    margin: 10px 0;
+}
+
+p {
+    color: var(--lightgray);
+}
+
+button {
+    width: 100%;
+    color: white;
+    background-color: var(--brightyellow);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.3);
+}
+
+.white {
+    color: var(--grayishblue);
+}
+
+.spacing {
+    line-height: 25px;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.green {
+    color: var(--brightyellow);
+    font-weight: 700;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.grid-layout {
+    border-radius: 10px;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'one' 'two' 'three';
+    margin: 25px;
+    padding: 25px;
+}
+
+.price {
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.month {
+    font-size: 0.9rem;
+    padding-left: 15px;
+    opacity: 0.5;
+}
+
+.block {
+    max-width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.block:nth-of-type(1) {
+    grid-area: one;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.block:nth-of-type(2) {
+    grid-area: two;
+    background-color: var(--cyan);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.block:nth-of-type(3) {
+    grid-area: three;
+    background-color: #4ABEBD;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 376px) {
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-template-areas: 'one one' 'two three';
+    }
+    .block:nth-of-type(2) {
+        border-bottom-left-radius: 10px;
+    }
+    .block:nth-of-type(3) {
+        border-bottom-left-radius: 0px;
+    }
+}
