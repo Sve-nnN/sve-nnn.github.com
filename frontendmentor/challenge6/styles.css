@@ -113,6 +113,9 @@ button:hover {
 
 main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 @media (min-width: 501px) {
