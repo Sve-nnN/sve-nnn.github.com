@@ -1,17 +1,20 @@
 :root {
-    --color1: #05668d;
+    --color1: #1d3557;
     --color2: #028090;
-    --color3: #00a896;
-    --color4: #02c39a;
-    --color5: #f0f3bd;
+    --color3: #e63946;
+    --color4: #457b9d;
+    --colorfondo: #f1faee;
+
 }
 
 .fuente {
     font-family: 'Anek Latin', sans-serif;
 }
-
+body{
+    background-color: var(--colorfondo);
+}
 .header {
-    color: var(--color5);
+    color: var(--colorfondo);
     background-color: var(--color1);
     height: 100px;
 }
@@ -74,7 +77,7 @@ dd {
     background-color: var(--color4);
     margin: 0;
     padding: 10px;
-    color: rgb(11, 10, 10);
+    color: var(--colorfondo);
     font-size: 1.10em;
 }
 
