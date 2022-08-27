@@ -11,6 +11,7 @@ section {
 }
 body {
   background-color: var(--colorfondo);
+  font-family: "Anek Latin", sans-serif;
 }
 h2 {
   font-size: 2.618em;
@@ -26,9 +27,6 @@ dd {
 dd {
   margin-left: 20px;
   margin-bottom: 10px;
-}
-.fuente {
-  font-family: "Anek Latin", sans-serif;
 }
 
 .header {
@@ -84,7 +82,8 @@ dd {
   border-bottom: solid 2px var(--color3);
 }
 
-.exp {
+.exp,
+.contact {
   background-color: var(--color4);
   margin: 0;
   padding: 10px;
@@ -92,11 +91,8 @@ dd {
   font-size: 1.1em;
 }
 
-.content {
-}
-
 .container {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 @media (max-width: 700px) {
