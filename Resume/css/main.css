@@ -60,13 +60,13 @@ dd {
 
 .edu {
   margin-top: 0px;
-  width: 65%;
+  min-width: 60%;
   display: inline-block;
   vertical-align: top;
 }
 
 .img {
-  max-width: 20%;
+  max-width: 25%;
   margin-top: 20px;
   display: inline-block;
 }
@@ -97,7 +97,7 @@ dd {
 
 .container {
   width: 70%;
-margin: 0 auto;
+  margin: 0 auto;
 }
 @media (max-width: 700px) {
   .container {
@@ -105,9 +105,9 @@ margin: 0 auto;
     display: block;
     margin: 0 15px;
   }
-  .edu{
-    max-width: 100%;  
-}
+  .edu {
+    max-width: 100%;
+  }
   .wd {
     display: block;
   }
@@ -115,11 +115,10 @@ margin: 0 auto;
     display: none;
   }
 }
-@media (min-width: 701px){
-    .blob{
-      margin-bottom: -350px;  
-    }
-
+@media (min-width: 701px) {
+  .blob {
+    margin-bottom: -350px;
+  }
 }
 @media (max-width: 650px) {
   .blob,
