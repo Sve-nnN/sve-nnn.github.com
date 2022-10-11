@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <form id="pokemon-form">
+        <label for="pokemons">Elige a un Pokemón:</label>
+        <select name="pokemons" id="pokemon-list" class="pokemon-list"></select>
+        <button id="submit-option" class="button" onclick="toggleHide()">
+          Seleccionar
+        </button>
+        <button
+          id="delete-btn"
+          class="button button-hide"
+          onclick="toggleHide()"
+        >
+          Eliminar
+        </button>
+      </form>
+    </div>
+    <div id="header-container" class="container">
+      <div class="ui inverted secondary menu">
+        <h1 id="header-text">Este es tu pokemon:</h1>
+      </div>
+      <div id="poketarjeta" class="poketarjeta"></div>
+    </div>
+
+    <script type="module" src="./second.js"></script>
+  </body>
+</html>

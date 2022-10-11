@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background: rgb(255, 99, 71);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 99, 71, 1) 46%,
+    rgba(0, 0, 0, 1) 46%,
+    rgba(240, 255, 255, 1) 47%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
+  margin: 0;
+  padding: 20px;
+  color: rgba(240, 255, 255, 1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pokemon-list {
+  text-align: center;
+  background-color: rgb(223, 222, 222);
+  border: none;
+  font-size: large;
+}
+.button-hide {
+  display: none;
+}
+.button {
+  display: inline-block;
+}
+.poketarjeta {
+  background-color: white;
+  width: 12%;
+  height: 16%;
+  padding: 25px;
+  position: relative;
+}
+.poketarjeta-numero {
+  position: absolute;
+  margin: 0;
+  padding: 10px;
+  top: 0;
+  left: 0;
+}
+.poketarjeta-nombre {
+  position: absolute;
+  margin: 0;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+/*TIPOS DE POKEMON*/
+.grass {
+  background-color: green;
+  color: white;
+}
