@@ -1,3 +1,9 @@
+:root {
+  --fw-100: 100;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+}
 body {
   margin: 0;
   background: rgb(255, 99, 71);
@@ -10,6 +16,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 .header {
   display: flex;
@@ -38,11 +45,18 @@ body {
   display: inline-block;
 }
 .poketarjeta {
-  background-color: white;
-  width: 12%;
-  height: 16%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 1 0 0 rgba(255, 103, 76, 0.515);
+  width: 250px;
+  height: 300px;
   padding: 25px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 .poketarjeta-numero {
   position: absolute;
@@ -51,14 +65,41 @@ body {
   top: 0;
   left: 0;
 }
+.fondo-imagen {
+  background-color: rgb(86, 112, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+}
+img {
+  object-fit: cover;
+}
+.poketarjeta-fondo {
+  margin: 0;
+  background-color: rgb(240, 76, 76);
+  width: 250px;
+  height: 270px;
+  position: absolute;
+  bottom: 0;
+}
 .poketarjeta-nombre {
+  text-transform: capitalize;
+  font-weight: var(--fw-700);
   position: absolute;
   margin: 0;
   padding: 10px;
   top: 0;
   right: 0;
 }
+ul {
+  position: absolute;
+  bottom: 0;
+}
 li {
+  display: inline-block;
+}
+li,
+ul {
   padding: 0;
   margin: 0;
   list-style-type: none;

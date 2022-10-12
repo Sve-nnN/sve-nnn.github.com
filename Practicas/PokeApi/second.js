@@ -31,7 +31,7 @@ function toggleHide() {
   deleteButton.className.toggle("button");
 }
 async function fetchKantoPokemon() {
-  await fetch("https://pokeapi.co/api/v2/pokemon?limit=500")
+  await fetch("https://pokeapi.co/api/v2/pokemon?limit=905")
     .then((response) => response.json())
     .then(function (allpokemon) {
       allpokemon.results.forEach(function (pokemon) {
@@ -165,9 +165,10 @@ function createTypes(types, ul) {
 
 function createPokeImage(containerDiv, pokedata) {
   let pokeImgContainer = document.createElement("div");
-  pokeImgContainer.classList.add("image");
+  pokeImgContainer.classList.add("fondo-imagen");
 
   let pokeImage = document.createElement("img");
+  pokeImage.classList.add("image");
   pokeImage.srcset = pokedata;
 
   pokeImgContainer.append(pokeImage);
