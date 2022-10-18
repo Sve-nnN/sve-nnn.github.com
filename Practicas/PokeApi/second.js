@@ -3,19 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   submitOption.addEventListener("click", handleSubmit);
 });
 /* Crea el Botón para elegir pokemon */
-var submitOption = document.getElementById("submit-option");
-var deleteButton = document.getElementById("#delete-btn");
+const submitOption = document.getElementById("submit-option");
+const deleteButton = document.getElementById("#delete-btn");
+
 /* Hace que carguen los pokemones al cargar la pagina. */
-window.onload = renderEverything;
+window.onload = fetchKantoPokemon();
 
 /**
  * It clears the container, then fetches the Kanto Pokemon.
  */
-function renderEverything() {
-  let pokemonContainer = document.querySelector("#poketarjeta");
-  pokemonContainer.innerText = "";
-  fetchKantoPokemon();
-}
 
 /**
  * It returns the element with the id of "delete-btn".
