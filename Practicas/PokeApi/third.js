@@ -6,7 +6,7 @@ const pokeId = document.querySelector("[pokeId]");
 const pokeInfo = document.querySelector("[pokeInfo]");
 const pokeTypes = document.querySelector("[pokeTypes]");
 const pokeStats = document.querySelector("[pokeStats]");
-const pokeDataList = document.getElementById("pokemons");
+const pokeDataList = document.querySelector("[pokemons]");
 const pokeIconImg = document.querySelector("[pokeIconImg] ");
 
 const Colors = {
@@ -87,23 +87,30 @@ const renderPokemonStats = (stats) => {
 const renderNotFound = () => {
   pokeName.textContent = "No he encontrado a ese Pokémon, intentalo de nuevo";
   pokeImg.setAttribute("src", "./img/pokeball-icon.webp");
-  pokeImg.style.background = "#fffff";
+  pokeImg.style.backgroundColor = "#fffff";
+  pokeIconImg.setAttribute("src", "./img/pokeball-icon.webp");
   pokeTypes.innerHTML = "";
   pokeStats.innerHTML = "";
   pokeId.innerHTML = "";
 };
-async function fetchKantoPokemon() {
-  await fetch("https://pokeapi.co/api/v2/pokemon?limit=905")
+function fetchKantoPokemon() {
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=905")
     .then((response) => response.json())
     .then(function (allpokemon) {
       allpokemon.results.forEach(function (pokemon) {
-        pokemonToList(pokemon);
+        pokemonToList(pokemon.name);
       });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 function pokemonToList(pokemon) {
   let pokeOption = document.createElement("option");
   pokeOption.classList.add("lista-pokemon");
-  pokeOption.value = pokemon.name;
-  pokeOption.append(pokeDataList);
+  pokeOption.value = pokemon;
+  pokeOption.textContent = pokemon;
+  console.log(pokeOption);
+
+  pokeDataList.appendChild(pokeOption);
 }
