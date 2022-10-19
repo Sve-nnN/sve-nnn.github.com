@@ -8,6 +8,11 @@ const pokeTypes = document.querySelector("[pokeTypes]");
 const pokeStats = document.querySelector("[pokeStats]");
 const pokeDataList = document.querySelector("[pokemons]");
 const pokeIconImg = document.querySelector("[pokeIconImg] ");
+const pokeAbility = document.querySelector("[pokeAbility] ");
+const pokeAbilityDescription = document.querySelector(
+  "[pokeAbilityDescription] "
+);
+const pokeInput = document.querySelector("[pokeInput] ");
 
 const Colors = {
   normal: `#D6D6D6`,
@@ -38,13 +43,13 @@ const searchPokemon = (event) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}/`)
     .then((data) => data.json())
     .then((response) => renderPokemonData(response))
-    .catch((err) => renderNotFound())
+    //.catch((err) => renderNotFound())
     .finally(console.log("LISTO"));
 };
 const renderPokemonData = (data) => {
   const sprite = data.sprites.other.home.front_default;
   const pixel_sprite = data.sprites.front_default;
-  const { stats, types } = data;
+  const { stats, types, abilities } = data;
 
   pokeName.textContent = data.name;
   pokeImg.setAttribute("src", sprite);
@@ -53,6 +58,8 @@ const renderPokemonData = (data) => {
   setCardColor(types);
   renderPokemonTypes(types);
   renderPokemonStats(stats);
+  renderAbilities(abilities);
+  pokeInput.innerHTML = "";
 };
 
 const setCardColor = (types) => {
@@ -62,6 +69,33 @@ const setCardColor = (types) => {
   pokeImg.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
   pokeImg.style.backgroundSize = "5px 5px";
 };
+const renderAbilities = (abilities) => {
+  pokeAbility.innerHTML = "";
+  pokeAbilityDescription.innerHTML = "";
+  abilities.forEach((url) => {
+    let abilityUrl = url.ability.url;
+    fetch(abilityUrl)
+      .then((response) => response.json())
+      .then((response) =>
+        response.flavor_text_entries.find(
+          (language) => language.language.name == "es"
+        )
+      )
+      .then((response) => {
+        const abilityDescriptionTextElement = document.createElement("div");
+        abilityDescriptionTextElement.textContent = response.flavor_text;
+        abilityDescriptionTextElement.classList.add("ability_description");
+        pokeAbilityDescription.appendChild(abilityDescriptionTextElement);
+      });
+  });
+  abilities.forEach((ability) => {
+    const abilityTextElement = document.createElement("div");
+    abilityTextElement.textContent = ability.ability.name;
+    abilityTextElement.classList.add("ability");
+    pokeAbility.appendChild(abilityTextElement);
+  });
+};
+
 const renderPokemonTypes = (types) => {
   pokeTypes.innerHTML = "";
   types.forEach((type) => {
