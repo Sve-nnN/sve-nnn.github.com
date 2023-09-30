@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  --main-font: "Young Serif", serif;
+  --secondary-font: "Cairo", sans-serif;
+  --black: #171a21;
+  --brown: #945600;
+  --purple: #8447ff;
+  --blue: #92bcea;
+  --white: #ffffe8;
+}
+body {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+.main-font {
+  font-family: var(--main-font);
+}
+h1 {
+  font-size: 64px;
+}
+strong {
+  font-weight: 700;
+  color: var(--purple);
+}
+
+small {
+  font-weight: 400;
+  color: var(--brown);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  font-size: 24px;
+}
+.navbar-logo {
+  font-size: 62px;
+}
+.fondo {
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+}
+.hero-intro {
+  font-size: 20px;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+}
+.hero-flecha {
+  display: flex;
+  margin-top: 230px;
+  justify-content: center;
+}
+.section {
+  margin: 50px 0;
+  padding: 0 50px;
+}
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.about-img {
+  height: 350px;
+}
+/*  ESTILOS PARA ESCRITORIO */
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    padding: 50px;
+  }
+}
+
+/*  ESTILOS PARA TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*  ESTILOS PARA MÓVIL */
+@media (max-width: 767px) {
+}
